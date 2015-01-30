@@ -1,0 +1,100 @@
+@import "settings";
+@import "foundation";
+@import "compass/css3";
+
+.primary-empty {
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+          $button-med,
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+          false,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+          $global-radius
+  );
+
+  border-width: 2px;
+}
+
+#home, #page2{
+  min-height: 100vh;
+}
+
+#concept, #previousRooms, #volunteer, footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+.logo-container{
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+footer{
+  img {
+    height: 72px;
+  }
+}
+
+#home {
+  @include background(url('images/cdj.jpg') no-repeat center center);
+  @include background-size(cover);
+  color: $ghost;
+  padding-top: 20vh;
+  img{
+    height: 50vh;
+  }
+  .button-container{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+  }
+}
+
+#concept{
+  min-height: 40vh;
+  i{
+    font-size: 4em;
+  }
+}
+
+#previousRooms{
+  min-height: 60vh;
+  h2{
+    margin-bottom: 1em;
+  }
+  background-color: $white-smoke;
+}
+
+#volunteer{
+  h2{
+    margin-bottom: 1em;
+  }
+  min-height: 85vh;
+}
+
+footer{
+  min-height: 15vh;
+  background-color: $tuatara;
+  color: $iron;
+
+  .circle{
+    float: right;
+    margin-left: 10px;
+    height: 1.5em;
+    width: 1.5em;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: $iron;
+    color: $tuatara;
+    font-size: 3em;
+  }
+}
+
+.photo-upload{
+  min-height: 150px;
+}

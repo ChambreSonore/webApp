@@ -1,0 +1,184 @@
+<head>
+  <title>Chambre Sonore</title>
+</head>
+
+<body>
+
+    <div id="home" class="text-center">
+        <img src="images/chambre_sonore_logo_global_transparent.svg"
+             alt="Chambre Sonore" class="home-logo">
+
+        <div class=" text-center button-container">
+            <a href="#page2" class="button radius">En Savoir Plus</a>
+        </div>
+    </div>
+
+    <div id="page2">
+        <div id="concept">
+            <h2 class="text-center">Concept</h2>
+            <div class="row">
+                <div class="large-4 columns text-center">
+                    <i class="fi-music"></i>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
+                        quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                </div>
+                <div class="large-4 columns text-center">
+                    <i class="fi-at-sign"></i>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
+                        quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                    <a href="#volunteer" class="primary-empty">Participer</a>
+                </div>
+                <div class="large-4 columns text-center">
+                    <i class="fi-sound"></i>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
+                        quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="previousRooms">
+            <h2 class="text-center">Sessions Précédentes</h2>
+            <div class="row">
+                <div class="large-12 columns text-center">
+                    <ul class="clearing-thumbs large-block-grid-3" data-clearing>
+                        <li>
+                            <a href="http://lorempixel.com/600/600">
+                                <img src="http://lorempixel.com/600/600">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://lorempixel.com/600/600">
+                                <img src="http://lorempixel.com/600/600">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://lorempixel.com/600/600">
+                                <img src="http://lorempixel.com/600/600">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pagination-centered">
+                <ul class="pagination">
+                    <li class="arrow unavailable"><a href="">&laquo;</a></li>
+                    <li class="current"><a href="">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li class="unavailable"><a href="">&hellip;</a></li>
+                    <li><a href="">12</a></li>
+                    <li><a href="">13</a></li>
+                    <li class="arrow"><a href="">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="volunteer">
+        <h2 class="text-center">Héberger une session</h2>
+        <div class="row">
+            <div class="large-12 columns">
+                <form>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <label>Prénom
+                                <input type="text" placeholder="John" required/>
+                            </label>
+                        </div>
+                        <div class="large-6 columns">
+                            <label>Nom
+                                <input type="text" placeholder="Travolta" required/>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Email
+                                <input type="email" placeholder="John@travolta.com" required/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="large-8 columns">
+                            <label>Nom de l'appartement
+                                <input type="text" placeholder="Appartement du Bonheur"/>
+                            </label>
+                        </div>
+                        <div class="large-4 columns">
+                            <label>Disponibilité
+                                <input type="datetime-local" placeholder="Travolta" require/>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-8 columns">
+                            <label>Adresse
+                                <input type="text" placeholder="9 rue de montrouge" required/>
+                            </label>
+                        </div>
+                        <div class="large-4 columns">
+                            <div class="row collapse">
+                                <label>Capacité</label>
+                                <div class="small-8 columns">
+                                    <input type="number" placeholder="20" min="0" required/>
+                                </div>
+                                <div class="small-4 columns">
+                                    <span class="postfix">Personnes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Adresse
+                                <select required>
+                                    <option value="Paris" selected>Paris</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <label>Photos
+                                <input name="filesToUpload[]" id="filesToUpload" type="file"
+                                       multiple required/>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="row photo-upload">
+                        <div class="large-12 columns">
+                            <a class="th" href="#">
+                                <img src="http://lorempixel.com/100/100">
+                            </a>
+                            <a class="th" href="#">
+                                <img src="http://lorempixel.com/100/100">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <button type="submit" class="button radius expand">Valider</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="row">
+            <div class="large-9 columns">
+                <img src="./images/chambre_sonore_logo_global_transparent.svg"
+                     alt="Chambre Sonore">
+            </div>
+            <div class="large-3 columns">
+                <span class="circle"><i class="fi-social-twitter"></i></span>
+                <span class="circle"><i class="fi-social-facebook"></i></span>
+            </div>
+        </div>
+    </footer>
+  {{initFoundation}}
+</body>
