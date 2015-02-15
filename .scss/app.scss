@@ -38,6 +38,7 @@ footer{
 }
 
 #home {
+  background-color: black;
   @include background(url('images/cdj.jpg') no-repeat center center);
   @include background-size(cover);
   color: $ghost;

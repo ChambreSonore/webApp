@@ -1,5 +1,6 @@
 <head>
   <title>Chambre Sonore</title>
+  <script src="https://www.youtube.com/iframe_api" async></script>
 </head>
 
 <body>
@@ -40,25 +41,19 @@
             <h2 class="text-center">Sessions Précédentes</h2>
             <div class="row">
                 <div class="large-12 columns text-center">
-                    <ul class="clearing-thumbs large-block-grid-3" data-clearing>
+                    <ul class="clearing-thumbs large-block-grid-{{gridNumber}}" data-clearing>
+                        {{#each videos}}
                         <li>
-                            <a href="http://lorempixel.com/600/600">
-                                <img src="http://lorempixel.com/600/600">
-                            </a>
+                            <div class="flex-video">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{snippet.resourceId.videoId}}" frameborder="0"
+                                    allowfullscreen></iframe>
+                                </div>
                         </li>
-                        <li>
-                            <a href="http://lorempixel.com/600/600">
-                                <img src="http://lorempixel.com/600/600">
-                            </a>
-                        </li>
-                        <li>
-                            <a href="http://lorempixel.com/600/600">
-                                <img src="http://lorempixel.com/600/600">
-                            </a>
-                        </li>
+                        {{/each}}
                     </ul>
                 </div>
             </div>
+          <!--
             <div class="pagination-centered">
                 <ul class="pagination">
                     <li class="arrow unavailable"><a href="">&laquo;</a></li>
@@ -72,6 +67,7 @@
                     <li class="arrow"><a href="">&raquo;</a></li>
                 </ul>
             </div>
+            -->
         </div>
     </div>
 
