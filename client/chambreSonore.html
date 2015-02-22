@@ -5,14 +5,28 @@
 
 <body>
 
-    <div id="home" class="text-center">
-        <img src="images/chambre_sonore_logo_global_transparent.svg"
-             alt="Chambre Sonore" class="home-logo">
+    <div id="menu">
+        <dl class="sub-nav center">
+            <dd id="menu-home" class="active"><a href="#">Accueil</a></dd>
+            <dd id="menu-sessions"><a href="#">Sessions</a></dd>
+            <dd id="menu-concept"><a href="#">Concept</a></dd>
+            <dd id="menu-signup"><a href="#">Inscription</a></dd>
+        </dl>
+    </div>
 
-        <div class=" text-center button-container">
-            <a href="#page2" class="button radius">En Savoir Plus</a>
+    <div id="fullpage">
+        <div class="section">
+            <div class="slide" id="home" >
+                <img src="images/chambre_sonore_logo_global_transparent.svg"
+                     alt="Chambre Sonore" class="home-logo">
+            </div>
+            <div class="slide" > </div>
+            <div class="slide"> </div>
+            <div class="slide"> </div>
         </div>
     </div>
+
+    <!--
 
     <div id="page2">
         <div id="concept">
@@ -53,7 +67,6 @@
                     </ul>
                 </div>
             </div>
-          <!--
             <div class="pagination-centered">
                 <ul class="pagination">
                     <li class="arrow unavailable"><a href="">&laquo;</a></li>
@@ -67,7 +80,6 @@
                     <li class="arrow"><a href="">&raquo;</a></li>
                 </ul>
             </div>
-            -->
         </div>
     </div>
 
@@ -176,5 +188,40 @@
             </div>
         </div>
     </footer>
+
+    -->
   {{initFoundation}}
+
+  <script>
+      $(document).ready(function() {
+          $('#fullpage').fullpage({
+              loopHorizontal: false,
+              slidesNavigation: true,
+              slidesNavPosition: 'bottom',
+              onSlideLeave: function(anchorLink, index, slideIndex){
+
+                  if(slideIndex == 0){
+                      $('#menu-home').removeClass('active');
+                  } else if (slideIndex == 1){
+                      $('#menu-sessions').removeClass('active');
+                  } else if (slideIndex == 2){
+                      $('#menu-concept').removeClass('active');
+                  } else if (slideIndex == 3){
+                      $('#menu-signup').removeClass('active');
+                  }
+              },
+              afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
+                  if(slideIndex == 1){
+                      $('#menu-sessions').addClass('active');
+                  } else if (slideIndex == 2){
+                      $('#menu-concept').addClass('active');
+                  } else if (slideIndex == 3){
+                      $('#menu-signup').addClass('active');
+                  } else {
+                      $('#menu-home').addClass('active');
+                  }
+              }
+          });
+      });
+  </script>
 </body>

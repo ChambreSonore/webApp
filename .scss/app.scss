@@ -2,55 +2,53 @@
 @import "foundation";
 @import "compass/css3";
 
-.primary-empty {
-  @include button(
-    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
-          $button-med,
-    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
-          false,
-    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
-          $global-radius
-  );
-
-  border-width: 2px;
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+  background-color: $base;
 }
 
-#home, #page2{
-  min-height: 100vh;
+
+#menu{
+  background-color: $ghost;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: 70;
+  width: 100%;
+  margin:0;
+  padding-top: 1.1em;
+  text-align: center;
+  height: 3.6em;
+  .sub-nav {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+  }
 }
 
+#home {
+  text-align: center;
+  color: $ghost;
+  img{
+    height: 50vh;
+  }
+}
+
+.slide{
+  background-color: $jet;
+}
+
+// Before using the fullpage.js library
+
+/*
 #concept, #previousRooms, #volunteer, footer {
   padding-top: 2em;
   padding-bottom: 2em;
 }
 
-
-.logo-container{
-  text-align: center;
-  margin-top: 10px;
-
-}
-
 footer{
   img {
     height: 72px;
-  }
-}
-
-#home {
-  background-color: black;
-  @include background(url('images/cdj.jpg') no-repeat center center);
-  @include background-size(cover);
-  color: $ghost;
-  padding-top: 20vh;
-  img{
-    height: 50vh;
-  }
-  .button-container{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
   }
 }
 
@@ -96,6 +94,25 @@ footer{
   }
 }
 
+.primary-empty {
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+          $button-med,
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+          false,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+          $global-radius
+  );
+
+  border-width: 2px;
+}
+
+#home, #page2{
+  min-height: 100vh;
+}
+
+
 .photo-upload{
   min-height: 150px;
-}
+
+}*/
