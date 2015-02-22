@@ -9131,12 +9131,24 @@ th.hide-for-touch {
 }
 /* line 32, ../../.scss/app.scss */
 #home img {
+  margin-top: -3.6em;
   height: 50vh;
 }
 
-/* line 37, ../../.scss/app.scss */
+/* line 38, ../../.scss/app.scss */
 .slide {
+  padding-top: 3em;
   background-color: #222222;
+  color: #F9F9F9;
+}
+/* line 42, ../../.scss/app.scss */
+.slide h2 {
+  color: #F9F9F9;
+}
+
+/* line 49, ../../.scss/app.scss */
+#concept i {
+  font-size: 4em;
 }
 
 /*

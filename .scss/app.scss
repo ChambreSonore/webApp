@@ -30,12 +30,25 @@
   text-align: center;
   color: $ghost;
   img{
+    margin-top: -3.6em;
     height: 50vh;
   }
 }
 
 .slide{
+  padding-top: 3em;
   background-color: $jet;
+  color: $snow;
+  h2{
+
+    color: $snow;
+  }
+}
+
+#concept{
+  i{
+    font-size: 4em;
+  }
 }
 
 // Before using the fullpage.js library
