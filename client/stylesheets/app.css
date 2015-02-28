@@ -9150,26 +9150,31 @@ th.hide-for-touch {
   color: #F9F9F9;
 }
 
-/* line 51, ../../.scss/app.scss */
-#concept i {
-  font-size: 4em;
+/* line 50, ../../.scss/app.scss */
+.slide-header {
+  margin-bottom: 3em;
 }
 
-/* line 56, ../../.scss/app.scss */
+/* line 55, ../../.scss/app.scss */
+#concept img {
+  height: 7em;
+}
+
+/* line 60, ../../.scss/app.scss */
 .video-thumbnail {
   cursor: pointer;
 }
-/* line 57, ../../.scss/app.scss */
+/* line 61, ../../.scss/app.scss */
 .video-thumbnail img:hover {
   border: solid 2px #EFEFEF;
 }
 
-/* line 63, ../../.scss/app.scss */
+/* line 67, ../../.scss/app.scss */
 .gallery {
   padding-bottom: 75px;
 }
 
-/* line 67, ../../.scss/app.scss */
+/* line 71, ../../.scss/app.scss */
 .session-slide {
   max-height: 80vh;
 }
