@@ -9142,30 +9142,34 @@ th.hide-for-touch {
   color: #F9F9F9;
 }
 /* line 42, ../../.scss/app.scss */
-.slide h2 h5 {
+.slide h2 {
+  color: #F9F9F9;
+}
+/* line 45, ../../.scss/app.scss */
+.slide h5 {
   color: #F9F9F9;
 }
 
-/* line 48, ../../.scss/app.scss */
+/* line 51, ../../.scss/app.scss */
 #concept i {
   font-size: 4em;
 }
 
-/* line 53, ../../.scss/app.scss */
+/* line 56, ../../.scss/app.scss */
 .video-thumbnail {
   cursor: pointer;
 }
-/* line 54, ../../.scss/app.scss */
+/* line 57, ../../.scss/app.scss */
 .video-thumbnail img:hover {
   border: solid 2px #EFEFEF;
 }
 
-/* line 60, ../../.scss/app.scss */
+/* line 63, ../../.scss/app.scss */
 .gallery {
   padding-bottom: 75px;
 }
 
-/* line 64, ../../.scss/app.scss */
+/* line 67, ../../.scss/app.scss */
 .session-slide {
   max-height: 80vh;
 }
