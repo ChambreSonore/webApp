@@ -22,44 +22,69 @@
             </div>
             <div class="slide">
 
-                <div class="row">
-                    <div class="large-12 columns flex-video">
-                        <div id="player">
+                <div class="session-slide">
+                    <div class="row">
+                        <div class="large-12 columns flex-video">
+                            <div id="player">
+                            </div>
                         </div>
                     </div>
-                </div>
+                  <!--
+                    <div class="row">
+                        <div class="large-12 columns">
+                            <h5 id="video-title"></h5>
+                            <p  id="video-description"></p>
+                        </div>
+                    </div>
+                    -->
 
 
-                <div class="row">
-                    <div class="large-12 columns">
-                        <ul class="clearing-thumbs large-block-grid-5" data-clearing>
-                          {{#each videos}}
-                              <li>
-                                  <img src="{{snippet.thumbnails.medium.url}}">
-                              </li>
-                          {{/each}}
-                        </ul>
+                    <div class="row">
+                        <div class="large-12 columns gallery">
+                            <ul class="clearing-thumbs large-block-grid-5" data-clearing>
+                              {{#each videos}}
+                                  <li class="video-thumbnail">
+                                      <img src="{{snippet.thumbnails.medium.url}}">
+                                  </li>
+                              {{/each}}
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div id="concept" class="slide">
 
-                <h2 class="text-center">Concept</h2>
                 <div class="row">
-                    <div class="large-4 columns text-center">
-                        <i class="fi-music"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
-                            quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                    <div class="large-8 large-offset-2 columns text-center">
+                        <h2 class="text-center">Concept</h2>
+                        <p>Chambre Sonore met en relation des amoureux du son et de la fête et leur permet
+                          de passer un moment privilégié le temps d’un before.</p>
                     </div>
-                    <div class="large-4 columns text-center">
-                        <i class="fi-at-sign"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
-                            quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                </div>
+                <div class="row">
+                    <div class="large-3 columns text-center">
+                        <img src="/images/Huse.png">
+                        <p>Tu souhaites accueillir une Chambre Sonore chez toi ?
+                            Tu vis à Paris et veux faire un before dans ton salon avec Djs en live et enregistrements vidéos pour faire kiffer tes potes ?
+                            Renseigne le formulaire concerné et nous te recontacterons afin de t’aider au mieux dans l’organisation de ta soirée.</p>
                     </div>
-                    <div class="large-4 columns text-center">
-                        <i class="fi-sound"></i>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin dictum sapien lacus,
-                            quis porta est gravida in. Cras varius quis mauris non dapibus.</p>
+                    <div class="large-3 columns text-center">
+                        <img src="/images/DJ.png">
+                        <p>Tu souhaites jouer à une Chambre Sonore ?
+                            Tu es un Dj de talent et veux mixer ou performer en live devant un public, tout en étant enregistré et diffusé sur notre réseau ?
+                            Renseigne le formulaire concerné et nous te recontacterons afin de te rencontrer.</p>
+                    </div>
+                    <div class="large-3 columns text-center">
+                        <img src="/images/danse.png">
+                        <p>Tu souhaites participer à une Chambre Sonore ?
+                            Tu estimes qu’il n’y a pas de meilleure before qu’aller chez un pote où des Djs te font kiffer en direct, où tu ne payes pas tes consos, et où le tout est enregistré ?
+                            Parle du concept à un de tes potes qui pourrait heberger une session et aide le à organiser sa soirée chez lui.</p>
+                    </div>
+                    <div class="large-3 columns text-center">
+                        <img src="/images/film.png">
+                        <p>LTu souhaites revivre les Chambres Sonores ?
+                            Tu as kiffé le set d’un Dj ou l’ambiance d’un appart’ en particulier ?
+                            Toutes nos Chambres Sonores sont enregistrées et tu peux les visionner ou les écouter sur notre site dans la section “Sessions”.</p>
                     </div>
                 </div>
             </div>
@@ -116,33 +141,6 @@
                                             <span class="postfix">Personnes</span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <label>Adresse
-                                        <select required>
-                                            <option value="Paris" selected>Paris</option>
-                                        </select>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <label>Photos
-                                        <input name="filesToUpload[]" id="filesToUpload" type="file"
-                                               multiple required/>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row photo-upload">
-                                <div class="large-12 columns">
-                                    <a class="th" href="#">
-                                        <img src="http://lorempixel.com/100/100">
-                                    </a>
-                                    <a class="th" href="#">
-                                        <img src="http://lorempixel.com/100/100">
-                                    </a>
                                 </div>
                             </div>
                             <div class="row">

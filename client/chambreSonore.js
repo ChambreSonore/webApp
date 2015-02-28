@@ -5,7 +5,7 @@ onYouTubeIframeAPIReady = function() {
   console.log('entering callback from youtube')
   HTTP.get('https://www.googleapis.com/youtube/v3/playlistItems', {
     params: {
-      playlistId: 'UU5qblOHgtY5kWb0MnhCYmJA',
+      playlistId: 'PLxMkhH3dLxLNCmHJFMYIYY7LqBO2QFwPc',
       order: 'date',
       part: 'snippet',
       key: 'AIzaSyC9heFBAikx36BavK0fxNHr3k4Hz5ttgII'
@@ -22,18 +22,16 @@ onYouTubeIframeAPIReady = function() {
         videoId: result.data.items[0].snippet.resourceId.videoId
       });
 
+      $('#video-title').text(result.data.items[0].snippet.title);
+      $('#video-description').text(result.data.items[0].snippet.description);
       Session.set('videos', result.data);
     }
   });
-}
+};
 
-Template.body.helpers({
-  videos: function(){
-    var videos = Session.get('videos');
-    if (videos && videos.items && videos.items.length){
-      return videos.items
-    } else {
-      return [];
-    }
+Template.body.events({
+  'click .video-thumbnail': function(event){
+    player.loadVideoById(this.snippet.resourceId.videoId, 0, 'default');
   }
 });
+
