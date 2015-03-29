@@ -27,8 +27,7 @@ Meteor.methods({
     if(!housing.motivations){
       throw new Meteor.Error('invalid-input', 'You cannot register an empty motivation');
     }
-
-    console.log(process.env.G_PASS);
+    
     housingSheet.setAuth('chambresonore@gmail.com', ''+process.env.G_PASS, function(err){
 
       if (err){
