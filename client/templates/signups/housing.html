@@ -1,0 +1,64 @@
+<template name="housingForm">
+    <h2 class="text-center">Héberger une session</h2>
+    <div class="row">
+        <div class="large-12 columns">
+            <form class="new-flat">
+                <div class="row">
+                    <div class="large-6 columns">
+                        <label>Prénom
+                            <input type="text" name="name" placeholder="John" required/>
+                        </label>
+                    </div>
+                    <div class="large-6 columns">
+                        <label>Nom
+                            <input type="text" name="familyName" placeholder="Travolta" required/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <label>Email
+                            <input type="email" name="email" placeholder="John@travolta.com"
+                                   required/>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-8 columns">
+                        <label>Nom de l'appartement
+                            <input type="text" name="flatName" placeholder="La tour"/>
+                        </label>
+                    </div>
+                    <div class="large-4 columns">
+                        <label>Disponibilité
+                            <input type="datetime-local" name="date" placeholder="Travolta"
+                                   required/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <label>Style de Musique
+                            <input type="text" name="style" placeholder="Techno, Electro, Minimale"
+                                   required/>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <label>Motivation
+                            <textarea name="motivations" placeholder="Dit nous ce qui te motives"
+                                      required></textarea>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <button type="submit" class="button radius expand">Valider</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

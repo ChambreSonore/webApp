@@ -1,0 +1,18 @@
+<template name="signUp">
+    <div class="row">
+        <div class="large-12 columns">
+            <ul class="tabs">
+                <li id ="housingTab" class="tab-title active"><a href="#">Héberger</a></li>
+                <li id ="mixingTab" class="tab-title"><a  href="#">Mixer</a></li>
+            </ul>
+            <div class="tabs-content">
+                <div class="content panel active" id="housing">
+                  {{> housingForm}}
+                </div>
+                <div class="content panel" id="mixing">
+                  {{> mixingForm}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

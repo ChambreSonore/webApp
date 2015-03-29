@@ -91,73 +91,10 @@
                 </div>
             </div>
             <div class="slide">
-                <h2 class="text-center">Héberger une session</h2>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <form>
-                            <div class="row">
-                                <div class="large-6 columns">
-                                    <label>Prénom
-                                        <input type="text" placeholder="John" required/>
-                                    </label>
-                                </div>
-                                <div class="large-6 columns">
-                                    <label>Nom
-                                        <input type="text" placeholder="Travolta" required/>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <label>Email
-                                        <input type="email" placeholder="John@travolta.com" required/>
-                                    </label>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="large-8 columns">
-                                    <label>Nom de l'appartement
-                                        <input type="text" placeholder="Appartement du Bonheur"/>
-                                    </label>
-                                </div>
-                                <div class="large-4 columns">
-                                    <label>Disponibilité
-                                        <input type="datetime-local" placeholder="Travolta" require/>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-8 columns">
-                                    <label>Adresse
-                                        <input type="text" placeholder="9 rue de montrouge" required/>
-                                    </label>
-                                </div>
-                                <div class="large-4 columns">
-                                    <div class="row collapse">
-                                        <label>Capacité</label>
-                                        <div class="small-8 columns">
-                                            <input type="number" placeholder="20" min="0" required/>
-                                        </div>
-                                        <div class="small-4 columns">
-                                            <span class="postfix">Personnes</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="large-12 columns">
-                                    <button type="submit" class="button radius expand">Valider</button>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
+                {{> signUp}}
             </div>
         </div>
     </div>
-  {{initFoundation}}
 
   <script>
       $(document).ready(function() {
@@ -191,4 +128,6 @@
           });
       });
   </script>
+
+    {{initFoundation}}
 </body>
