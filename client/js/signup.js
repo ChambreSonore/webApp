@@ -28,6 +28,21 @@ Template.housingForm.events({
       date: event.target.date.value,
       style: event.target.style.value,
       motivations: event.target.motivations.value
+    }, function(error){
+      if (error){
+        toastr.error(error.message, 'Error');
+        return;
+      }
+
+      event.target.name.value = '';
+      event.target.familyName.value = '';
+      event.target.email.value = '';
+      event.target.flatName.value = '';
+      event.target.date.value = '';
+      event.target.style.value = '';
+      event.target.motivations.value = '';
+
+      toastr.success('Contact enregistré avec succèss.')
     });
 
     return false
@@ -45,6 +60,21 @@ Template.mixingForm.events({
       date: event.target.date.value,
       style: event.target.style.value,
       motivations: event.target.motivations.value
+    }, function(error){
+      if (error){
+        toastr.error(error.message, 'Error');
+        return;
+      }
+
+      event.target.name.value = '';
+      event.target.familyName.value = '';
+      event.target.email.value = '';
+      event.target.pseudo.value = '';
+      event.target.date.value = '';
+      event.target.style.value = '';
+      event.target.motivations.value = '';
+
+      toastr.success('Contact enregistré avec succèss.')
     });
 
     return false
