@@ -9169,26 +9169,43 @@ th.hide-for-touch {
   color: #444444;
 }
 
-/* line 70, ../../.scss/app.scss */
+/* line 71, ../../.scss/app.scss */
+#home #lastTweet {
+  margin-top: 0.25em;
+}
+/* line 74, ../../.scss/app.scss */
+#home h1 {
+  margin-top: 0.5em;
+}
+/* line 76, ../../.scss/app.scss */
+#home h1 a {
+  color: #FAFAFA;
+}
+/* line 79, ../../.scss/app.scss */
+#home h1 a:hover {
+  color: #EFEFEF;
+}
+
+/* line 85, ../../.scss/app.scss */
 .video-thumbnail {
   cursor: pointer;
 }
-/* line 71, ../../.scss/app.scss */
+/* line 86, ../../.scss/app.scss */
 .video-thumbnail img:hover {
   outline: solid 2px #EFEFEF;
 }
 
-/* line 79, ../../.scss/app.scss */
+/* line 94, ../../.scss/app.scss */
 .selected img {
   outline: solid 2px #EFEFEF;
 }
 
-/* line 84, ../../.scss/app.scss */
+/* line 99, ../../.scss/app.scss */
 .gallery {
   padding-bottom: 75px;
 }
 
-/* line 88, ../../.scss/app.scss */
+/* line 103, ../../.scss/app.scss */
 .home-logo {
   cursor: pointer;
 }
