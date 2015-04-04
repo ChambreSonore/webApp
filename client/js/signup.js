@@ -40,10 +40,10 @@ Template.housingForm.events({
       event.target.style.value = '';
       event.target.motivations.value = '';
 
-      toastr.success('Contact enregistré avec succèss.')
+      toastr.success('Contact enregistré avec succèss.');
     });
 
-    return false
+    return false;
   }
 });
 
@@ -72,9 +72,9 @@ Template.mixingForm.events({
       event.target.style.value = '';
       event.target.motivations.value = '';
 
-      toastr.success('Contact enregistré avec succèss.')
+      toastr.success('Contact enregistré avec succèss.');
     });
 
-    return false
+    return false;
   }
 });
