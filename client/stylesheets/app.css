@@ -9166,15 +9166,20 @@ th.hide-for-touch {
 }
 /* line 61, ../../.scss/app.scss */
 .video-thumbnail img:hover {
-  border: solid 2px #EFEFEF;
+  outline: solid 2px #EFEFEF;
 }
 
-/* line 67, ../../.scss/app.scss */
+/* line 69, ../../.scss/app.scss */
+.selected img {
+  outline: solid 2px #EFEFEF;
+}
+
+/* line 74, ../../.scss/app.scss */
 .gallery {
   padding-bottom: 75px;
 }
 
-/* line 71, ../../.scss/app.scss */
-.session-slide {
-  max-height: 80vh;
+/* line 78, ../../.scss/app.scss */
+.home-logo {
+  cursor: pointer;
 }

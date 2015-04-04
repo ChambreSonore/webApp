@@ -59,15 +59,22 @@
 
 .video-thumbnail{
   img:hover{
-    border: solid 2px $silver;
+    outline: solid 2px $silver;
   }
+
   cursor: pointer;
+}
+
+.selected{
+  img {
+    outline: solid 2px $silver;
+  }
 }
 
 .gallery{
   padding-bottom: 75px;
 }
 
-.session-slide{
-  max-height: 80vh;
+.home-logo{
+  cursor: pointer;
 }

@@ -1,8 +1,13 @@
 var
   player;
 
+function updatePlayerText(snippet){
+  $('#video-title').text(snippet.title);
+  $('#video-description').text(snippet.description.substring(0, 300));
+}
+
 onYouTubeIframeAPIReady = function() {
-  console.log('entering callback from youtube')
+  console.log('entering callback from youtube');
   HTTP.get('https://www.googleapis.com/youtube/v3/playlistItems', {
     params: {
       playlistId: 'PLxMkhH3dLxLNCmHJFMYIYY7LqBO2QFwPc',
@@ -22,16 +27,22 @@ onYouTubeIframeAPIReady = function() {
         videoId: result.data.items[0].snippet.resourceId.videoId
       });
 
-      $('#video-title').text(result.data.items[0].snippet.title);
-      $('#video-description').text(result.data.items[0].snippet.description);
+      updatePlayerText(result.data.items[0].snippet);
       Session.set('videos', result.data);
+      Session.set('selectedVideoId', result.data.items[0].snippet.resourceId.videoId);
     }
   });
 };
 
 Template.body.events({
   'click .video-thumbnail': function(event){
+    updatePlayerText(this.snippet);
     player.loadVideoById(this.snippet.resourceId.videoId, 0, 'default');
+    Session.set('selectedVideoId', this.snippet.resourceId.videoId);
+  },
+  'click .home-logo': function(){
+    $.fn.fullpage.moveTo(1, 1);
+    player.playVideo();
   }
 });
 

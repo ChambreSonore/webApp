@@ -7,10 +7,10 @@
 
     <div id="menu">
         <dl class="sub-nav center">
-            <dd id="menu-home" class="active"><a href="#">Accueil</a></dd>
-            <dd id="menu-sessions"><a href="#">Sessions</a></dd>
-            <dd id="menu-concept"><a href="#">Concept</a></dd>
-            <dd id="menu-signup"><a href="#">Inscription</a></dd>
+            <dd id="menu-home" class="{{#if isActive id=0}}active{{/if}}"><a href="#">Accueil</a></dd>
+            <dd id="menu-sessions" class="{{#if isActive id=1}}active{{/if}}"><a href="#">Sessions</a></dd>
+            <dd id="menu-concept" class="{{#if isActive id=2}}active{{/if}}"><a href="#">Concept</a></dd>
+            <dd id="menu-signup" class="{{#if isActive id=3}}active{{/if}}"><a href="#">Inscription</a></dd>
         </dl>
     </div>
 
@@ -22,73 +22,32 @@
             </div>
             <div class="slide">
 
-                <div class="session-slide">
-                    <div class="row">
-                        <div class="large-12 columns flex-video">
-                            <div id="player">
-                            </div>
+                <div class="row">
+                    <div class="large-10 columns">
+                        <div class="flex-video">
+                            <div id="player"></div>
                         </div>
                     </div>
-                  <!--
-                    <div class="row">
-                        <div class="large-12 columns">
-                            <h5 id="video-title"></h5>
-                            <p  id="video-description"></p>
-                        </div>
+                    <div class="large-2 columns">
+                        <ul class="clearing-thumbs large-block-grid-1" data-clearing>
+                            {{#each videos}}
+                                <li class="video-thumbnail {{#if selected}}selected{{/if}}">
+                                    <img src="{{snippet.thumbnails.medium.url}}">
+                                </li>
+                            {{/each}}
+                        </ul>
                     </div>
-                    -->
+                </div>
 
-
-                    <div class="row">
-                        <div class="large-12 columns gallery">
-                            <ul class="clearing-thumbs large-block-grid-5" data-clearing>
-                              {{#each videos}}
-                                  <li class="video-thumbnail">
-                                      <img src="{{snippet.thumbnails.medium.url}}">
-                                  </li>
-                              {{/each}}
-                            </ul>
-                        </div>
+                <div class="row">
+                    <div class="large-10 columns">
+                        <h5 id="video-title"></h5>
+                        <p  id="video-description"></p>
                     </div>
                 </div>
             </div>
             <div id="concept" class="slide">
-
-                <div class="row">
-                    <div class="large-8 large-offset-2 columns text-center slide-header">
-                        <h2 class="text-center">Concept</h2>
-                        <p>Chambre Sonore met en relation des amoureux du son et de la fête et leur permet
-                          de passer un moment privilégié le temps d’un before.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-6 columns text-center">
-                        <img src="/images/Huse.png">
-                        <p>Tu souhaites accueillir une Chambre Sonore chez toi ?
-                            Tu vis à Paris et veux faire un before dans ton salon avec Djs en live et enregistrements vidéos pour faire kiffer tes potes ?
-                            Renseigne le formulaire concerné et nous te recontacterons afin de t’aider au mieux dans l’organisation de ta soirée.</p>
-                    </div>
-                    <div class="large-6 columns text-center">
-                        <img src="/images/DJ.png">
-                        <p>Tu souhaites jouer à une Chambre Sonore ?
-                            Tu es un Dj de talent et veux mixer ou performer en live devant un public, tout en étant enregistré et diffusé sur notre réseau ?
-                            Renseigne le formulaire concerné et nous te recontacterons afin de te rencontrer.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-6 columns text-center">
-                        <img src="/images/danse.png">
-                        <p>Tu souhaites participer à une Chambre Sonore ?
-                            Tu estimes qu’il n’y a pas de meilleure before qu’aller chez un pote où des Djs te font kiffer en direct, où tu ne payes pas tes consos, et où le tout est enregistré ?
-                            Parle du concept à un de tes potes qui pourrait heberger une session et aide le à organiser sa soirée chez lui.</p>
-                    </div>
-                    <div class="large-6 columns text-center">
-                        <img src="/images/film.png">
-                        <p>LTu souhaites revivre les Chambres Sonores ?
-                            Tu as kiffé le set d’un Dj ou l’ambiance d’un appart’ en particulier ?
-                            Toutes nos Chambres Sonores sont enregistrées et tu peux les visionner ou les écouter sur notre site dans la section “Sessions”.</p>
-                    </div>
-                </div>
+                {{> concept}}
             </div>
             <div class="slide">
                 {{> signUp}}
@@ -102,32 +61,14 @@
               loopHorizontal: false,
               slidesNavigation: true,
               slidesNavPosition: 'bottom',
-              onSlideLeave: function(anchorLink, index, slideIndex){
-
-                  if(slideIndex == 0){
-                      $('#menu-home').removeClass('active');
-                  } else if (slideIndex == 1){
-                      $('#menu-sessions').removeClass('active');
-                  } else if (slideIndex == 2){
-                      $('#menu-concept').removeClass('active');
-                  } else if (slideIndex == 3){
-                      $('#menu-signup').removeClass('active');
-                  }
-              },
               afterSlideLoad: function( anchorLink, index, slideAnchor, slideIndex){
-                  if(slideIndex == 1){
-                      $('#menu-sessions').addClass('active');
-                  } else if (slideIndex == 2){
-                      $('#menu-concept').addClass('active');
-                  } else if (slideIndex == 3){
-                      $('#menu-signup').addClass('active');
+                  if (slideIndex) {
+                      Session.set('activeMenu', slideIndex);
                   } else {
-                      $('#menu-home').addClass('active');
+                      Session.set('activeMenu', 0);
                   }
               }
           });
       });
   </script>
-
-    {{initFoundation}}
 </body>

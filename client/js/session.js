@@ -9,5 +9,8 @@ Template.body.helpers({
     } else {
       return [];
     }
+  },
+  selected: function(){
+    return this.snippet.resourceId.videoId === Session.get('selectedVideoId');
   }
 });

@@ -2,14 +2,12 @@
 
 Template.body.events({
   'click #housingTab': function(event){
-    console.log(event);
     $('#housingTab').addClass('active');
     $('#housing').addClass('active');
     $('#mixingTab').removeClass('active');
     $('#mixing').removeClass('active');
   },
   'click #mixingTab': function(event){
-    console.log(event);
     $('#mixingTab').addClass('active');
     $('#mixing').addClass('active');
     $('#housingTab').removeClass('active');
