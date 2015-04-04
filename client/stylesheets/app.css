@@ -9160,26 +9160,35 @@ th.hide-for-touch {
   height: 7em;
 }
 
-/* line 60, ../../.scss/app.scss */
+/* line 61, ../../.scss/app.scss */
+#signup .panel {
+  padding: 20px;
+}
+/* line 65, ../../.scss/app.scss */
+#signup h2 {
+  color: #444444;
+}
+
+/* line 70, ../../.scss/app.scss */
 .video-thumbnail {
   cursor: pointer;
 }
-/* line 61, ../../.scss/app.scss */
+/* line 71, ../../.scss/app.scss */
 .video-thumbnail img:hover {
   outline: solid 2px #EFEFEF;
 }
 
-/* line 69, ../../.scss/app.scss */
+/* line 79, ../../.scss/app.scss */
 .selected img {
   outline: solid 2px #EFEFEF;
 }
 
-/* line 74, ../../.scss/app.scss */
+/* line 84, ../../.scss/app.scss */
 .gallery {
   padding-bottom: 75px;
 }
 
-/* line 78, ../../.scss/app.scss */
+/* line 88, ../../.scss/app.scss */
 .home-logo {
   cursor: pointer;
 }

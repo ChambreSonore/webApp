@@ -57,6 +57,16 @@
   }
 }
 
+#signup{
+  .panel{
+    padding: 20px;
+  }
+
+  h2{
+    color: $tuatara;
+  }
+}
+
 .video-thumbnail{
   img:hover{
     outline: solid 2px $silver;
